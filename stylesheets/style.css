@@ -1,9 +1,11 @@
 body {
+    background-color: rgb(44, 44, 44);
+    color: white;
     font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN',sans-serif;
 }
 
 a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -12,6 +14,7 @@ li {
 }
 
 .content {
+    display: none;
     width: 80%;
     margin: 0 auto;
     animation: contentAnime 1.5s ease forwards;
@@ -31,7 +34,7 @@ li {
 /* header */
 .header-content {
     width: 100%;
-    height: 100px;
+    margin-top: 40px;
 }
 
 .header-nav-box {
@@ -42,16 +45,19 @@ li {
 
 .header-nav-box ul {
     display: flex;
-    line-height: 120px;
     justify-content: space-around;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
 }
 
-.header-nav-box a {
+.header-nav-box li {
     position: relative;
 }
 
-.header-nav-box a::before {
+.header-nav-box li:hover {
+    cursor: pointer;
+}
+
+.header-nav-box li::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -59,23 +65,27 @@ li {
     width: 120%;
     height: 2px;
     border-radius: 100%;
-    background: rgb(78, 78, 78);
+    background: rgb(255, 255, 255);
     transition: .5s all;
     transform: scale(0,1);
     transform-origin: center top;
 }
 
-.header-nav-box .now a::before,
-.header-nav-box a:hover::before {
+.header-nav-box .now::before,
+.header-nav-box li:hover::before {
     transform: scale(1,1);
 }
 
 
 /* top */
+.top-content {
+    width: 100%;
+}
+
 .top-content-title {
     margin-top: 300px;
-    font-size: 1.5rem;
-    border-bottom: 3px solid #000;
+    font-size: 2rem;
+    border-bottom: 3px solid #ffffff;
     width: 0;
     opacity: 0;
     animation: top-anime 4s ease forwards;
@@ -93,36 +103,6 @@ li {
     margin: 0 60px 0;
 }
 
-
-.top-cat-box img {
-    width: 20%;
-}
-
-.anime-content {
-    display: flex;
-}
-
-.anime-1 {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    border: 1px black solid;
-}
-
-.anime-1-1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: aqua;
-}
-
-.anime-1:nth-of-type(1) {
-    margin-right: 20px;
-
-}
 
 
 /* profile  */
@@ -178,7 +158,7 @@ li {
 .modal {
     width: 70%;
     height: 500px;
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     border-radius: 10px;
     opacity: 0;
     animation: modalAnime 1s ease-out forwards;

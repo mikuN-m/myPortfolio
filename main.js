@@ -1,25 +1,32 @@
-// 図形要素の取得
-const shapes = document.getElementsByClassName('anime-1-1');
+// タブ切り替え
+const $contentTarget = document.getElementsByClassName('js-target');
+const $tabTrigger = document.getElementsByClassName('js-trigger');
 
-// マウス移動イベントリスナーの追加
-for (let i=0; shapes.length>i; i++) {
-  document.addEventListener('mousemove', (e) => {
-    handleMouseMove(e,shapes[i]);
-  });
+//初期化関数
+const init = () => {
+  $contentTarget[0].style.display = 'block';
+}
+init();
+
+const contentInit = (target,trigger) => {
+  target.style.display = 'none';
+  trigger.classList.remove('now');
+  console.log(target,trigger);
 }
 
 
-// マウス移動イベントの処理
-function handleMouseMove(event,shapes) {
-    var mouseX = event.clientX;
-    var mouseY = event.clientY;
-    
-    // マウスカーソルの位置をパーセントに変換
-    var percentX = (mouseX / window.innerWidth) * 100;
-    var percentY = (mouseY / window.innerHeight) * 100;
-  
+//click
+const clickHander = (trigger,target) => {
+  trigger.addEventListener('click', () => {
+    for (let i=0; $tabTrigger.length>i; i++) {
+      contentInit($contentTarget[i],$tabTrigger[i]);
+    }
 
-  // 図形の配置を更新
-  shapes.style.left = `${percentX-50}%`;
-  shapes.style.top = `${percentY-50}%`;
+    target.style.display = 'block'
+    trigger.classList.add('now');
+  });
+}
+
+for (let i=0; $tabTrigger.length>i; i++) {
+  clickHander($tabTrigger[i],$contentTarget[i]);
 }
