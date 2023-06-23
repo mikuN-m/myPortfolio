@@ -1,12 +1,16 @@
 // 図形要素の取得
-const container = document.getElementById('anime-1');
-const shape = document.getElementById('anime-1-1');
+const shapes = document.getElementsByClassName('anime-1-1');
 
 // マウス移動イベントリスナーの追加
-document.addEventListener('mousemove', handleMouseMove);
+for (let i=0; shapes.length>i; i++) {
+  document.addEventListener('mousemove', (e) => {
+    handleMouseMove(e,shapes[i]);
+  });
+}
+
 
 // マウス移動イベントの処理
-function handleMouseMove(event) {
+function handleMouseMove(event,shapes) {
     var mouseX = event.clientX;
     var mouseY = event.clientY;
     
@@ -16,6 +20,6 @@ function handleMouseMove(event) {
   
 
   // 図形の配置を更新
-  shape.style.left = `${percentX-10}%`;
-  shape.style.top = `${percentY-10}%`;
+  shapes.style.left = `${percentX-50}%`;
+  shapes.style.top = `${percentY-50}%`;
 }

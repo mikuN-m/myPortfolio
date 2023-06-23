@@ -71,8 +71,6 @@ li {
 }
 
 
-
-
 /* top */
 .top-content-title {
     margin-top: 300px;
@@ -95,22 +93,37 @@ li {
     margin: 0 60px 0;
 }
 
-#anime-1 {
+
+.top-cat-box img {
+    width: 20%;
+}
+
+.anime-content {
+    display: flex;
+}
+
+.anime-1 {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border: 1px black solid;
 }
 
-#anime-1-1 {
+.anime-1-1 {
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     background-color: aqua;
 }
+
+.anime-1:nth-of-type(1) {
+    margin-right: 20px;
+
+}
+
 
 /* profile  */
 .profile-content {
