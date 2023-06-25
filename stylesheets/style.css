@@ -46,7 +46,7 @@ li {
 .header-nav-box ul {
     display: flex;
     justify-content: space-around;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
 }
 
 .header-nav-box li {
@@ -84,7 +84,7 @@ li {
 
 .top-content-title {
     margin-top: 300px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     border-bottom: 3px solid #ffffff;
     width: 0;
     opacity: 0;
@@ -123,6 +123,10 @@ li {
 .skill-box {
     width: 60%;
     margin: 55px auto;
+}
+
+.skill-box p {
+    font-size: 1.5rem;
 }
 
 

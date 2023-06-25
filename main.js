@@ -1,3 +1,6 @@
+//マウスの位置を％で取得
+
+
 // タブ切り替え
 const $contentTarget = document.getElementsByClassName('js-target');
 const $tabTrigger = document.getElementsByClassName('js-trigger');
@@ -11,7 +14,6 @@ init();
 const contentInit = (target,trigger) => {
   target.style.display = 'none';
   trigger.classList.remove('now');
-  console.log(target,trigger);
 }
 
 
