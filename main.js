@@ -32,3 +32,16 @@ const clickHander = (trigger,target) => {
 for (let i=0; $tabTrigger.length>i; i++) {
   clickHander($tabTrigger[i],$contentTarget[i]);
 }
+
+
+// modal
+const trigger = document.getElementsByClassName('js-work-trigger');
+const target = document.getElementsByClassName('modal-content');
+
+trigger[0].addEventListener('click', () => {
+  target[0].style.display = "block"
+});
+
+trigger[1].addEventListener('click', () => {
+  target[0].style.display = "none";
+});

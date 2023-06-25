@@ -137,9 +137,6 @@ li {
     background-image: url(./image/test-img.jpg);
     background-size: cover;
     background-position: center;
-}
-
-.works-box:hover {
     cursor: pointer;
 }
 
@@ -170,11 +167,21 @@ li {
 
 @keyframes modalAnime {
     from {
-        transform: translateY(-500px);
+        transform: translateY(-100px);
         opacity: 0;
     }
     to {
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+.modal .bac-btn {
+    text-align: right;
+    margin: 20px 20px 0 0;
+}
+
+.modal .bac-btn img {
+    width: 30px;
+    cursor: pointer;
 }
