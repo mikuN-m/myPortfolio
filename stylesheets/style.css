@@ -34,7 +34,7 @@ img {
     }
 }
 
-p {
+p , label {
     font-size: 1.07rem;
     font-weight: bold;
 }
@@ -201,7 +201,28 @@ p {
     cursor: pointer;
 }
 
-/* flexにする */
+
+/* contact */
+.form-content {
+    text-align: center;
+
+}
+
+input,select , textarea {
+    border: 1px black solid;
+    border-radius: 5px;
+}
+
+input , textarea {
+    width: 30%;
+}
+
+input:nth-of-type(3) {
+    width: 100px;
+    border: none;
+    background-color: #5c5c5cb0;
+}
+
 
 /* レスポンシブ */
 @media screen and (max-width: 990px) {
