@@ -13,10 +13,14 @@ li {
     list-style: none;
 }
 
+img {
+    width: 100%;
+}
+
 .content {
     display: none;
     width: 80%;
-    margin: 0 auto;
+    margin: 60px auto;
     animation: contentAnime 1.5s ease forwards;
     opacity: 0;
 }
@@ -132,12 +136,22 @@ p {
 
 
 /* works */
-.works-box {
+.work-box-content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.work-box {
+    width: 33%;
+}
+
+.work-box-nav {
+    margin: 10px auto;
     width: 250px;
     height: 250px;
-    background-image: url(./image/test-img.jpg);
-    background-size: cover;
-    background-position: center;
     cursor: pointer;
 }
 
@@ -188,3 +202,16 @@ p {
 }
 
 /* flexにする */
+
+/* レスポンシブ */
+@media screen and (max-width: 990px) {
+    .work-box {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .work-box {
+        width: 100%;
+    }
+}

@@ -2,7 +2,7 @@
 
 
 // タブ切り替え
-const $contentTarget = document.getElementsByClassName('js-target');
+const $contentTarget = document.getElementsByClassName('js-nav-target');
 const $tabTrigger = document.getElementsByClassName('js-trigger');
 
 //初期化関数
@@ -36,12 +36,20 @@ for (let i=0; $tabTrigger.length>i; i++) {
 
 // modal
 const trigger = document.getElementsByClassName('js-work-trigger');
-const target = document.getElementsByClassName('modal-content');
+const bacTrigger = document.getElementsByClassName('js-work-bac-trigger');
+const target = document.getElementsByClassName('js-work-target');
 
-trigger[0].addEventListener('click', () => {
-  target[0].style.display = "block"
-});
+const workClickHandler = (i) => {
+  trigger[i].addEventListener('click', () => {
+    target[i].style.display = "block"
+  });
 
-trigger[1].addEventListener('click', () => {
-  target[0].style.display = "none";
-});
+  bacTrigger[i].addEventListener('click', () => {
+    target[i].style.display = "none";
+  });
+}
+
+for (let i=0; trigger.length>i; i++) {
+  workClickHandler(i);
+}
+
