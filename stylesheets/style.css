@@ -19,8 +19,7 @@ img {
 
 .content {
     display: none;
-    width: 80%;
-    margin: 60px auto;
+    width: 100%;
     animation: contentAnime 1.5s ease forwards;
     opacity: 0;
 }
@@ -43,7 +42,7 @@ p , label {
 /* header */
 .header-content {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .header-nav-box {
@@ -136,70 +135,48 @@ p , label {
 
 
 /* works */
-.work-box-content {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
 .work-box {
-    width: 33%;
+    margin-top: 60px;
+    display: flex;
+    height: 75vh;
+    justify-content: space-between;
 }
 
-.work-box-nav {
-    margin: 10px auto;
-    width: 250px;
-    height: 250px;
-    cursor: pointer;
-}
-
-.modal-content {
-    display: none;
-}
-
-.works-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: rgba(41, 41, 41, 0.781);
-    width: 100%;
-    height: 100vh;
+.work-box-arrow {
     display: grid;
     place-items: center;
+    width: 10%;
 }
 
-.modal {
-    width: 70%;
-    height: 500px;
-    background-color: rgb(255, 255, 255);
+.work-box-img {
+    width: 75%;
+    background-image: url(./image/work-img1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 1px 2px 15px 9px #ababab;
     border-radius: 10px;
+    transition: .8s all;
+    position: relative;
+}
+
+.work-box-img::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.363);
     opacity: 0;
-    animation: modalAnime 1s ease-out forwards;
-}
-
-@keyframes modalAnime {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.modal .bac-btn {
-    text-align: right;
-    margin: 20px 20px 0 0;
-}
-
-.modal .bac-btn img {
-    width: 30px;
-    cursor: pointer;
-}
+    transition: 1s all;
+  }
+  
+  .work-box-img:hover::before {
+    opacity: 1;
+  }
 
 
 /* contact */

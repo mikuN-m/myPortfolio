@@ -34,22 +34,39 @@ for (let i=0; $tabTrigger.length>i; i++) {
 }
 
 
-// modal
-const trigger = document.getElementsByClassName('js-work-trigger');
-const bacTrigger = document.getElementsByClassName('js-work-bac-trigger');
-const target = document.getElementsByClassName('js-work-target');
+// work
+const workTarget = document.getElementById('js-work-target');
+const workBackTrigger = document.getElementById('js-work-BackTrigger');
+const workGoTrigger = document.getElementById('js-work-GoTrigger');
 
-const workClickHandler = (i) => {
-  trigger[i].addEventListener('click', () => {
-    target[i].style.display = "block"
-  });
+const imgBox = ['url(../stylesheets/image/work-img1.png)','url(../stylesheets/image/work-img2.png)'];
+let showNum = 0;
 
-  bacTrigger[i].addEventListener('click', () => {
-    target[i].style.display = "none";
-  });
+const show = () => {
+  workTarget.style.backgroundImage = imgBox[showNum];
 }
 
-for (let i=0; trigger.length>i; i++) {
-  workClickHandler(i);
+const clickGo = () => {
+  if (showNum == imgBox.length-1) {
+    showNum = 0;
+  } else {
+    showNum++;
+  }
+  show();
 }
 
+const clickBack = () => {
+  if (showNum == 0) {
+    showNum = imgBox.length-1
+  } else {
+    showNum--;
+  }
+  show();
+}
+
+workGoTrigger.addEventListener('click', () => {
+  clickGo();
+});
+workBackTrigger.addEventListener('click', () => {
+  clickBack();
+});
