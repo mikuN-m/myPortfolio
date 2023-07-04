@@ -158,6 +158,11 @@ p , label {
     border-radius: 10px;
     transition: .8s all;
     position: relative;
+    cursor: pointer;
+}
+
+.work-box-img:hover {
+    transform: scale(1.02,1.02);
 }
 
 .work-box-img::before {
