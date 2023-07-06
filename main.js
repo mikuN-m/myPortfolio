@@ -31,16 +31,27 @@ clickHander($tabTrigger[i],$contentTarget[i]);
 }
 
 
-// スライド
+
+
+// work
 const workTarget = document.getElementById('js-work-target');
 const workBackTrigger = document.getElementById('js-work-BackTrigger');
 const workGoTrigger = document.getElementById('js-work-GoTrigger');
-
 const imgBox = ['url(./image/work-img1.png)','url(./image/work-img2.png)'];
 let showNum = 0;
+const workNumBox = document.getElementById('js-work-num-box');
+const imgLen = imgBox.length;
+const workNum = document.getElementsByClassName('work-num');
 
+// スライド
 const show = () => {
   workTarget.style.backgroundImage = imgBox[showNum];
+}
+const workNumShow = () => {
+  for (let i=0; i<workNum.length; i++){
+    workNum[i].classList.remove('work-num-show');
+  }
+  workNum[showNum].classList.add('work-num-show');
 }
 
 const clickGo = () => {
@@ -48,7 +59,8 @@ const clickGo = () => {
     showNum = 0;
   } else {
     showNum++;
-  }
+  } 
+  workNumShow();
   show();
 }
 
@@ -58,6 +70,7 @@ const clickBack = () => {
   } else {
     showNum--;
   }
+  workNumShow();
   show();
 }
 
@@ -67,3 +80,6 @@ workGoTrigger.addEventListener('click', () => {
 workBackTrigger.addEventListener('click', () => {
   clickBack();
 });
+
+
+

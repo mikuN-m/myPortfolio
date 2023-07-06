@@ -135,8 +135,27 @@ p , label {
 
 
 /* works */
+.work-num-box {
+    margin: 30px auto 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.work-num {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 100%;
+    margin: 0 5px;
+    transition: .5s all;
+}
+.work-num-show {
+    background-color: black;
+}
+
 .work-box {
-    margin-top: 60px;
     display: flex;
     height: 75vh;
     justify-content: space-between;
