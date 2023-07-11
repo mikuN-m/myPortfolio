@@ -82,4 +82,14 @@ workBackTrigger.addEventListener('click', () => {
 });
 
 
+// modal
+const modal = document.getElementsByClassName('js-modal-target');
+const modalBack = document.getElementById('js-modal-bac');
 
+workTarget.addEventListener('click', () => {
+  modal[0].style.display = 'block';
+})
+
+modalBack.addEventListener('click', () => {
+  modal[0].style.display = 'none';
+})
