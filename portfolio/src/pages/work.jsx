@@ -3,9 +3,10 @@ import Header from "../components/header";
 
 class Work extends React.Component {
     render(){
+        const workLen = ['no','no','no','now'];
         return(
             <div>
-                <Header />
+                <Header headerLen = {workLen} />
                 <h1>Work</h1>
             </div>
         )

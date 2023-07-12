@@ -3,9 +3,10 @@ import Header from "../components/header";
 
 class Top extends React.Component {
     render(){
+    const topLen = ['now','no','no','no'];
         return(
             <div>
-                <Header />
+                <Header headerLen = {topLen} />
                 <div className="top-content content js-nav-target">
 
                     <div className="top-content-title">
