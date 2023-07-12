@@ -1,14 +1,28 @@
-import { useState } from 'react'
-import './App.css'
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Top from "./pages/top"
+import Profile from "./pages/profile"
+import Skill from "./pages/skill"
+import Work from "./pages/work"
 
-function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <h1>hello</h1>
-    </>
-  )
+class App extends React.Component {
+  render(){
+    return(
+      <div>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Top />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/skill" element={<Skill />} />
+            <Route path="/work" element={<Work />} />
+          </Routes>
+        </Router>
+
+        <script src="./js/main.js" type="module"></script>
+      </div>
+    )
+  }
 }
 
 export default App
