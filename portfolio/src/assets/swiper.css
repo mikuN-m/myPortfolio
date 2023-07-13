@@ -1,0 +1,30 @@
+.swiper {
+    width: 90%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    margin: 40px;
+
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    --swiper-navigation-color: rgb(51, 70, 107);
+}
+
+.swiper-pagination-bullet {
+    background-color: rgb(51, 70, 107);
+}
