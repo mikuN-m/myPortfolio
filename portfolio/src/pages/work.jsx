@@ -14,40 +14,54 @@ class Work extends React.Component {
     render(){
         const workLen = ['no','no','no','now'];
 
-        const workImg = [work1,work2];
+        // img表示
+        const workImgBox = ["work1","work2"];
+        const workImgList = [];
 
-        // const workBox = [
-        //     [work1],
-        //     [work2]
-        // ];
+        workImgBox.forEach((item,index) => {
+            workImgList.push(
+                <SwiperSlide>
+                    <div className="work-img img" id={item} onClick={()=>modalClickHandler(index)}></div>
+                </SwiperSlide>
+            );
+        });
 
-        // const workList = [];
+        // modal表示
+        const modalBox = [
+            work1,work2
+        ];
+        const modalList = [];
 
-        // workBox.forEach((item) => {
-        //     workList.push(
-        //         <div className="modal-wrapper content js-modal-target">
+        modalBox.forEach((item,index) => {
+            modalList.push(
+                <div className="modal-wrapper content modal-click">
 
-        //             <div className="modal-content">
+                    <div className="modal-content">
 
-        //                 <div className="modal-box">
-        //                     <div className="modal">
+                        <div className="modal-box">
+                            <div className="modal">
 
-        //                         <img src={item[0]} />
+                                <div className="modal-bac" onClick={()=>{modalBacClickHandler(index)}}></div>
+                                <img src={item} />
                                 
-        //                     </div>
-        //                 </div>
+                            </div>
+                        </div>
 
                         
-        //             </div>
+                    </div>
 
-        //         </div>
-        //     )
+                </div>
+            )
             
-        // })
+        })
 
+        const modal = document.getElementsByClassName('modal-click');
+        const modalClickHandler = (item) => {
+            modal[item].style.display = 'block';
+        };
 
-        const modalHandler = () => {
-            const modal = document.getElementById('')
+        const modalBacClickHandler = (item) => {
+            modal[item].style.display = 'none'; 
         };
 
         return(
@@ -67,16 +81,14 @@ class Work extends React.Component {
                             modules={[Navigation, Pagination, Mousewheel, Keyboard]}
                             className="mySwiper"
                         >
-                            <SwiperSlide>
-                                {/* publicからの画像の呼び出しがわからない */}
-                                <div className="work-img" id="work1"></div>
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <div className="work-img" id="work2"></div>
-                            </SwiperSlide>
+                            {workImgList}
                         </Swiper>
                     </div>
+
                 </div>
+
+                {modalList}
+                
             </div>
         )
     }

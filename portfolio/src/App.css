@@ -204,7 +204,7 @@ p , label {
   z-index: 1000;
   width: 100%;
   height: 100vh;
-  background-color: #000000c0;
+  background-color: #111111be;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -219,24 +219,11 @@ p , label {
 }
 
 .modal-bac {
-  width: 30px;
-  margin: 0 0 0 auto;
+  width: 40px;
+  height: 40px;
+  margin: 5px 0 5px auto;
+  background-image: url("./assets/back-btn.png");
+  background-size: cover;
+  background-position: center;
   cursor: pointer;
-}
-
-.modal-texts {
-  display: flex;
-  justify-content: space-between;
-}
-
-.work-modal-img {
-  width: 55%;
-}
-
-.work-modal-img img {
-  border-radius: 10px;
-}
-
-.work-modal-text {
-  width: 40%;
 }
