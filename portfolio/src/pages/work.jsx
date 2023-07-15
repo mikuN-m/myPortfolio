@@ -28,7 +28,8 @@ class Work extends React.Component {
 
         // modal表示
         const modalBox = [
-            work1,work2
+            [work1,'予約サイト','EJS・CSS','Node.js','予約ができるサイトです'],
+            [work2,'自己紹介サイト','・EJS・CSS','自己紹介サイトです']
         ];
         const modalList = [];
 
@@ -42,7 +43,29 @@ class Work extends React.Component {
                             <div className="modal">
 
                                 <div className="modal-bac" onClick={()=>{modalBacClickHandler(index)}}></div>
-                                <img src={item} />
+
+                                    
+                                <div className="modal-img-text-box">
+                                    
+                                    <div className="modal-img">
+                                        <img src={item[0]} />
+                                    </div>
+                                    
+                                    <div className="modal-title-item">
+                                        <h1>{item[1]}</h1>
+
+                                        <h2>使用言語</h2>
+                                        <p>{item[2]}</p>
+
+                                        <h2>開発環境</h2>
+                                        <p>{item[3]}</p>
+                                    </div>                                  
+
+                                </div>
+
+                                <div className="modal-text">
+                                        <p>{item[4]}</p>
+                                </div>  
                                 
                             </div>
                         </div>

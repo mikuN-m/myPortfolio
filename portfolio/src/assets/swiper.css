@@ -25,5 +25,8 @@
 }
 
 .swiper-pagination-bullet {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
     background-color: rgb(51, 70, 107);
 }

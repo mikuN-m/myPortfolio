@@ -211,7 +211,7 @@ p , label {
 
 .modal-box {
   width: 80%;
-  padding: 10px 20px;
+  padding: 15px 35px;
   margin: 0 auto;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
@@ -225,4 +225,21 @@ p , label {
   background-size: cover;
   background-position: center;
   cursor: pointer;
+}
+
+.modal-img-text-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-img {
+  width: 50%;
+}
+
+.modal-img img {
+  border-radius: 10px;
+}
+
+.modal-title-item {
+  width: 35%;
 }
