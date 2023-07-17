@@ -3,7 +3,7 @@ import Header from "../components/header";
 
 class Skill extends React.Component {
     render(){
-        const skillLen = ['no','no','now','no'];
+        const skillLen = ['no','no','tab-now','no'];
 
         const skillBox = [
             ['HTML','見出しや段落、リスト、フォームなどの基本的な記述ができます。'],
@@ -26,7 +26,7 @@ class Skill extends React.Component {
             skillList.push(
                 <div className="skill-box">
                     <div className="skill-name">
-                        <h1>&nbsp;&nbsp;{item[0]}</h1>
+                        <h1>{item[0]}</h1>
                     </div>
                     <div className="skill-text">
                         <p>
@@ -35,7 +35,6 @@ class Skill extends React.Component {
                     </div>
                 </div>
             )
-            
         })
 
         return(

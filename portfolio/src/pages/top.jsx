@@ -3,7 +3,7 @@ import Header from "../components/header";
 
 class Top extends React.Component {
     render(){
-    const topLen = ['now','no','no','no'];
+    const topLen = ['tab-now','no','no','no'];
         return(
             <div>
                 <Header headerLen = {topLen} />
