@@ -10,7 +10,7 @@ class App extends React.Component {
   render(){
     return(
       <div>
-        <Router basename={process.env.PUBLIC_URL}>
+        <Router>
           <Routes>
             <Route path="/" element={<Top />} />
             <Route path="/profile" element={<Profile />} />

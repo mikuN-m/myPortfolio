@@ -105,8 +105,11 @@ class Work extends React.Component {
             <div>
                 <Header headerLen = {workLen} />
 
+                <div className="header-titel-hidden">
+                    <h1>work</h1>
+                </div>
 
-                <div className="content js-nav-target">
+                <div className="js-nav-target">
 
                     <div className="work-box">
                         <Swiper

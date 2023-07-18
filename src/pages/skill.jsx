@@ -40,6 +40,10 @@ class Skill extends React.Component {
         return(
             <div>
                 <Header headerLen = {skillLen} />
+
+                <div className="header-titel-hidden">
+                    <h1>skill</h1>
+                </div>
                 
                 <div className="content js-nav-target">
 

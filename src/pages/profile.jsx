@@ -7,6 +7,10 @@ class Profile extends React.Component {
         return(
             <div>
                 <Header headerLen = {topLen} />
+
+                <div className="header-titel-hidden">
+                    <h1>profle</h1>
+                </div>
                 
                 <div className="content js-nav-target">
 

@@ -19,9 +19,17 @@ img {
 }
 
 .content {
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
   animation: contentAnime 1.5s ease forwards;
   opacity: 0;
+}
+
+.header-titel-hidden {
+  display: none;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: center;
 }
 
 @keyframes contentAnime {
@@ -95,6 +103,74 @@ p , label {
 }
 
 
+/* ヘッダーボタン */
+.header-btn-content {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.header-btn {
+  width: 60px;
+  height: 60px;
+  margin: 20px 20px 0 auto;
+  background-color: rgb(56,54,69);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.header-btn span:nth-of-type(1),
+.header-btn span:nth-of-type(2),
+.header-btn span:nth-of-type(3) {
+  position: absolute;
+  width: 50px;
+  height: 5px;
+  left: 5px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  transition: .5s all;
+}
+
+.header-btn span:nth-of-type(1) {
+  top: 10px;
+}
+.header-btn span:nth-of-type(2) {
+  top: 28px;
+}
+.header-btn span:nth-of-type(3) {
+  top: 46px;
+}
+
+.header-btn-action span:nth-of-type(1) {
+  top: 22px;
+  transform: translateY(6px) rotate(-45deg);
+}
+.header-btn-action span:nth-of-type(2) {
+  opacity: 0;
+}
+.header-btn-action span:nth-of-type(3) {
+  top: 35px;
+  transform: translateY(-6px) rotate(45deg);
+}
+
+.header-hidden-content {
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  width: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #777777;
+}
+
+.header-toggle {
+  width: 40%;
+}
+
+
 /* top */
 .top-content {
   width: 100%;
@@ -139,7 +215,7 @@ p , label {
 
 /* skill */
 .skill-box {
-  width: 60%;
+  width: 80%;
   margin: 55px auto;
 }
 

@@ -1,0 +1,21 @@
+@media screen and (max-width: 1024px) {
+    .header-titel-hidden {
+        display: block;
+    }
+
+    .header-content {
+        display: none;
+    }
+
+    .header-btn-content {
+        display: block;
+    }
+
+    .profile-content {
+        text-align: left;
+    }
+
+    .profile-name {
+        text-align: center;
+    }
+}
