@@ -33,7 +33,10 @@ class Work extends React.Component {
             '予約ができるサイトです。ログイン、プラン閲覧、予約等の機能を作りました。',
             'https://github.com/mikuN-m/camp'
             ],
-            [work2,'自己紹介サイト','・EJS・CSS','自己紹介サイトです']
+            [work2,'自己紹介サイト','・EJS・CSS','vite・React',
+            '自己紹介サイトです',
+            'https://github.com/mikuN-m/myPortfolio'
+            ]
         ];
         const modalList = [];
 

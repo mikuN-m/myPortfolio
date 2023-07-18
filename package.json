@@ -7,7 +7,7 @@
     "dev": "vite",
     "preview": "vite preview",
     "build": "vite build && xcopy /I dist docs",                   
-    "rebuild": "vite build && rm -R docs && cp -r dist docs",
+    "rebuild": "vite build && rm -R docs && xcopy /I dist docs",
     "git": "git add . && git commit && git push origin main"
   },
   "dependencies": {
