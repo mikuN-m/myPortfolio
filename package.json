@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "build": "vite build && xcopy /I dist docs",                   
-    "rebuild": "vite build && rm -R docs && xcopy /I dist docs",
-    "git": "git add . && git commit && git push origin main"
+    "build": "vite build && copy /I dist docs",                   
+    "rebuild": "vite build && rmdir -R docs && copy /I dist docs",
+    "git": "git add . && git commit && git push origin master"
   },
   "dependencies": {
     "react": "^18.2.0",
