@@ -6,5 +6,13 @@ export default defineConfig({
   base: process.env.GITHUB_PAGES 
         ? "myPortfolio"
         : "./", 
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        dir: 'docs'
+      }
+    }
+  },
   plugins: [react()],
 })
