@@ -50,7 +50,7 @@ class Work extends React.Component {
                             <div className="modal">
 
                                 <div className="modal-bac" onClick={()=>{modalBacClickHandler(index)}}>
-                                    <span class="material-symbols-outlined">
+                                    <span className="material-symbols-outlined">
                                         close
                                     </span>
                                 </div>
@@ -73,7 +73,7 @@ class Work extends React.Component {
                                         <p className="modal-github-lick">
                                             <Link to={item[5]} target="_block">
                                                 GitHubはこちら
-                                                <span class="material-symbols-outlined">
+                                                <span className="material-symbols-outlined">
                                                     arrow_forward_ios
                                                 </span>
                                             </Link>
