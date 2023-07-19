@@ -7,7 +7,7 @@
         display: none;
     }
 
-    .header-btn-content {
+    .nav-btn-content {
         display: block;
     }
 
@@ -17,5 +17,19 @@
 
     .profile-name {
         text-align: center;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: .9rem;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .modal-box {
+        width: 95%;
     }
 }

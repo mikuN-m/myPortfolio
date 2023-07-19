@@ -103,8 +103,8 @@ p , label {
 }
 
 
-/* ヘッダーボタン */
-.header-btn-content {
+/* ハンバーガーメニュー */
+.nav-btn-content {
   display: none;
   position: fixed;
   top: 0;
@@ -112,19 +112,19 @@ p , label {
   z-index: 10;
 }
 
-.header-btn {
+.nav-btn {
   width: 60px;
   height: 60px;
-  margin: 20px 20px 0 auto;
-  background-color: rgb(56,54,69);
+  margin: 10px 10px 0 auto;
+  background-color: rgb(56, 69, 54);
   border-radius: 4px;
   position: relative;
   cursor: pointer;
 }
 
-.header-btn span:nth-of-type(1),
-.header-btn span:nth-of-type(2),
-.header-btn span:nth-of-type(3) {
+.nav-btn span:nth-of-type(1),
+.nav-btn span:nth-of-type(2),
+.nav-btn span:nth-of-type(3) {
   position: absolute;
   width: 50px;
   height: 5px;
@@ -134,40 +134,69 @@ p , label {
   transition: .5s all;
 }
 
-.header-btn span:nth-of-type(1) {
+.nav-btn span:nth-of-type(1) {
   top: 10px;
 }
-.header-btn span:nth-of-type(2) {
+.nav-btn span:nth-of-type(2) {
   top: 28px;
 }
-.header-btn span:nth-of-type(3) {
+.nav-btn span:nth-of-type(3) {
   top: 46px;
 }
 
-.header-btn-action span:nth-of-type(1) {
+.nav-btn-action span:nth-of-type(1) {
   top: 22px;
   transform: translateY(6px) rotate(-45deg);
 }
-.header-btn-action span:nth-of-type(2) {
+.nav-btn-action span:nth-of-type(2) {
   opacity: 0;
 }
-.header-btn-action span:nth-of-type(3) {
+.nav-btn-action span:nth-of-type(3) {
   top: 35px;
   transform: translateY(-6px) rotate(45deg);
 }
 
-.header-hidden-content {
+.nav-hidden-content {
+  display: none;
   position: fixed;
   z-index: 9;
   top: 0;
-  width: 0;
+  width: 40%;
   right: 0;
   height: 100vh;
-  background-color: #777777;
+  background-color: rgb(56, 69, 54);
+  animation: openAnime 1s ease forwards;
 }
 
-.header-toggle {
-  width: 40%;
+@keyframes openAnime {
+  from {
+    transform: translateX(500px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.nav-toggle {
+  display: block;
+}
+
+.nav-items {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.nav-box {
+  height: 70vh;
+  width: 100%;
+  text-align: center;
+  line-height: 15vh;
+}
+
+.nav-box a {
+  font-size: 1.8rem;
+  color: white;
 }
 
 

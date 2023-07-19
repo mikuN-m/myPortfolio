@@ -10,10 +10,10 @@ class Header extends React.Component {
 
         const btnClickHandler = () => {
             const btn = document.getElementById('btn-click');
-            const headerContent = document.getElementById('header-hidden-toggle');
+            const navContent = document.getElementById('nav-hidden-toggle');
 
-            btn.classList.toggle('header-btn-action');
-            headerContent.classList.toggle('header-toggle');
+            btn.classList.toggle('nav-btn-action');
+            navContent.classList.toggle('nav-toggle');
         }
 
         return(
@@ -31,15 +31,26 @@ class Header extends React.Component {
                     </div>
                 </div>
 
-                <div className="header-btn-content">
-                    <div className="header-btn" id="btn-click" onClick={()=>{btnClickHandler()}}>
+                <div className="nav-btn-content">
+                    <div className="nav-btn" id="btn-click" onClick={()=>{btnClickHandler()}}>
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </div>
 
-                <div className="header-hidden-content" id="header-hidden-toggle">
+                <div className="nav-hidden-content" id="nav-hidden-toggle">
+
+                    <div className="nav-items">
+                        <div className="nav-box">
+                            <ul>
+                                <li><Link to={"/"} className={len1}>top</Link></li>
+                                <li><Link to={"/profile"} className={len2}>profile</Link></li>
+                                <li><Link to={"/skill"} className={len3}>skill</Link></li>
+                                <li><Link to={"/work"} className={len4}>work</Link></li>
+                            </ul>
+                        </div>
+                    </div>
 
                 </div>
             
