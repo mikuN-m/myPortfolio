@@ -14,5 +14,12 @@ export default defineConfig({
       }
     }
   },
+
+  server: {
+    headers: {
+      'Permissions-Policy': 'interest-cohort=()',
+    },
+  },
+
   plugins: [react()],
 })
