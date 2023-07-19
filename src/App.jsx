@@ -12,7 +12,7 @@ class App extends React.Component {
       <div>
         <Router>
           <Routes>
-            <Route path="/" element={<Top />} />
+            <Route path="/myPortfolio" element={<Top />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/skill" element={<Skill />} />
             <Route path="/work" element={<Work />} />
