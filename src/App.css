@@ -288,10 +288,10 @@ p , label {
 }
 
 #work1 {
-  background-image: url("./assets/work-img1.png");
+  background-image: url(work-img1.png);
 }
 #work2 {
-  background-image: url("./assets/work-img2.png");
+  background-image: url(work-img2.png);
 }
 
 .work-img:hover {

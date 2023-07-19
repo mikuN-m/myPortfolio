@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/header"
-import work1 from "../assets/work-img1.png"
-import work2 from "../assets/work-img2.png"
+import work1 from "/work-img1.png"
+import work2 from "/work-img2.png"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
