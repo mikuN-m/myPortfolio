@@ -22,7 +22,7 @@ class Header extends React.Component {
                     <div className="header-nav-box">
 
                         <ul>
-                            <li><Link to={"/"} className={len1}>top</Link></li>
+                            <li><Link to={"/myPortfolio"} className={len1}>top</Link></li>
                             <li><Link to={"/profile"} className={len2}>profile</Link></li>
                             <li><Link to={"/skill"} className={len3}>skill</Link></li>
                             <li><Link to={"/work"} className={len4}>work</Link></li>
@@ -44,7 +44,7 @@ class Header extends React.Component {
                     <div className="nav-items">
                         <div className="nav-box">
                             <ul>
-                                <li><Link to={"/"} className={len1}>top</Link></li>
+                                <li><Link to={"/myPortfolio"} className={len1}>top</Link></li>
                                 <li><Link to={"/profile"} className={len2}>profile</Link></li>
                                 <li><Link to={"/skill"} className={len3}>skill</Link></li>
                                 <li><Link to={"/work"} className={len4}>work</Link></li>
