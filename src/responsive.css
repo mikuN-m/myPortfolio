@@ -7,6 +7,10 @@
         display: none;
     }
 
+    .top-content {
+        height: 100vh;
+    }
+
     .nav-btn-content {
         display: block;
     }
@@ -26,10 +30,36 @@
     .content p {
         font-size: .9rem;
     }
+
+    .work-img::before {
+        content: none;
+    }
+
+    .work-img:hover {
+        box-shadow: none;
+        transform: none;
+    }
+
+    .top-content {
+        font-size: 3rem;
+        padding: 0;
+        display: grid;
+        place-items: center;
+    }
+
+    .shape-1 {
+        top: 25%;
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media screen and (max-width: 390px) {
     .modal-box {
         width: 95%;
+    }
+
+    .top-content {
+        font-size: 2rem;
     }
 }

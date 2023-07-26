@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/header"
 import work1 from "../assets/work-img1.png"
 import work2 from "../assets/work-img2.png"
+import work3 from "../assets/work-img3.png"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -16,7 +17,7 @@ class Work extends React.Component {
         const workLen = ['no','no','no','tab-now'];
 
         // img表示
-        const workImgBox = ["work1","work2"];
+        const workImgBox = ["work3","work2","work1"];
         const workImgList = [];
 
         workImgBox.forEach((item,index) => {
@@ -29,14 +30,18 @@ class Work extends React.Component {
 
         // modal表示
         const modalBox = [
+            [work3,'おしゃれなカフェ','jsx・tailwind','vite・React',
+            'tailwindを使用したおしゃれなカフェのサイトです。',
+            'https://github.com/mikuN-m/React-zakka','https://mikun-m.github.io/React-zakka/'
+            ],
+            [work2,'自己紹介サイト','jsx・CSS','vite・React',
+            '自己紹介サイトです。',
+            'https://github.com/mikuN-m/myPortfolio','no'
+            ],
             [work1,'予約サイト','EJS・JavaScript・CSS','Node.js',
             '予約ができるサイトです。ログイン、プラン閲覧、予約等の機能を作りました。',
-            'https://github.com/mikuN-m/camp'
-            ],
-            [work2,'自己紹介サイト','・EJS・CSS','vite・React',
-            '自己紹介サイトです',
-            'https://github.com/mikuN-m/myPortfolio'
-            ]
+            'https://github.com/mikuN-m/camp','no'
+            ]            
         ];
         const modalList = [];
 
@@ -62,7 +67,7 @@ class Work extends React.Component {
                                 <div className="modal-text-item">
                                     <h1 className="modal-title">{item[1]}</h1>
 
-                                    <h2>使用言語</h2>
+                                    <h2>使用言語・ライブラリ</h2>
                                     <p>{item[2]}</p>
 
                                     <h2>開発環境</h2>
@@ -77,7 +82,8 @@ class Work extends React.Component {
                                                     arrow_forward_ios
                                                 </span>
                                             </Link>
-                                        </p>
+                                        </p>                             
+
                                     </div>  
                                 </div>                                  
                                 
@@ -103,6 +109,13 @@ class Work extends React.Component {
 
         return(
             <div>
+
+                <div className="shape-box">
+                    <div className="bac-shape shape-9"></div>
+                    <div className="bac-shape shape-10"></div>
+                    <div className="bac-shape shape-11"></div>
+                </div>
+
                 <Header headerLen = {workLen} />
 
                 <div className="header-titel-hidden">

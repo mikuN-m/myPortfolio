@@ -39,6 +39,14 @@ class Skill extends React.Component {
 
         return(
             <div>
+
+                <div className="shape-box">
+                    <div className="bac-shape shape-5"></div>
+                    <div className="bac-shape shape-6"></div>
+                    <div className="bac-shape shape-7"></div>
+                    <div className="bac-shape shape-8"></div>
+                </div>
+
                 <Header headerLen = {skillLen} />
 
                 <div className="header-titel-hidden">

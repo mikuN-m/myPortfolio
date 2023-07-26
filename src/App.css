@@ -1,6 +1,5 @@
 body {
-  color: rgb(79,93,76);
-  background-color: rgb(235,240,218);
+  color: rgb(43, 51, 41);
   font-family: 'Lato', sans-serif;
   font-family: 'Noto Sans JP', sans-serif;
 }
@@ -21,7 +20,7 @@ img {
 .content {
   width: 80%;
   margin: 0 auto;
-  animation: contentAnime 1.5s ease forwards;
+  animation: contentAnime 2s ease forwards;
   opacity: 0;
 }
 
@@ -203,29 +202,145 @@ p , label {
 /* top */
 .top-content {
   width: 100%;
+  height: 80vh;
+  padding: 15% 0 0 10%;
+  font-size: 4.5rem;
 }
 
-.top-content-title {
-  margin-top: 300px;
-  font-size: 2.5rem;
-  border-bottom: 3px solid rgb(79,93,76);
-  width: 0;
+.top-anime {
   opacity: 0;
-  animation: top-anime 4s ease forwards;
-  display: flex;
+  animation: topAnime 2s ease forwards;
 }
 
-@keyframes top-anime {
+@keyframes topAnime {
   to {
-      width: 100%;
-      opacity: 1;
+    opacity: 1;
   }
 }
 
-.top-content-title h1 {
-  margin: 0 60px 0;
+.top-anime:nth-of-type(1) {
+  animation-delay: .2s;
+}
+.top-anime:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.top-anime:nth-of-type(3) {
+  animation-delay: .6s;
+}
+.top-anime:nth-of-type(4) {
+  animation-delay: .8s;
+}
+.top-anime:nth-of-type(5) {
+  animation-delay: 1s;
+}
+.top-anime:nth-of-type(6) {
+  animation-delay: 1.2s;
+}
+.top-anime:nth-of-type(7) {
+  animation-delay: 1.4s;
+}
+.top-anime:nth-of-type(8) {
+  animation-delay: 1.6s;
 }
 
+
+/* shape */
+.shape-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -5;
+}
+
+.shape-1 {
+  position: absolute;
+  top: 18%;
+  right: 10%;
+  width: 500px;
+  height: 450px;
+  background: linear-gradient(rgb(160, 188, 181), rgb(173, 196, 190), rgb(185, 204, 199), rgb(198, 212, 209), rgb(211, 220, 218));
+  border-radius: 41% 59% 39% 61% / 64% 44% 56% 36%;
+}
+
+.bac-shape {
+  position: absolute;
+  z-index: -10;
+}
+
+.shape-2 {
+  top: 20%;
+  left: 10%;
+  width: 250px;
+  height: 250px;
+  background-color: rgba(238, 47, 41, 0.219);
+  border-radius: 57% 43% 66% 34% / 52% 42% 58% 48%;
+}
+.shape-3 {
+  top: 25%;
+  right: 10%;
+  width: 400px;
+  height: 400px;
+  background-color: rgba(220, 224, 14, 0.212);
+  border-radius: 43% 57% 44% 56% / 52% 42% 58% 48%;
+}
+.shape-4 {
+  top: 35%;
+  left: 20%;
+  width: 370px;
+  height: 370px;
+  background-color: rgba(248, 160, 29, 0.233);
+  border-radius: 41% 59% 39% 61% / 64% 44% 56% 36%;
+}
+.shape-5 {
+  top: 10%;
+  right: 10%;
+  width: 300px;
+  height: 300px;
+  background-color: rgba(87, 60, 206, 0.158);
+  border-radius: 57% 43% 33% 67% / 54% 70% 30% 46%;
+}
+.shape-6 {
+  top: 30%;
+  left: 10%;
+  width: 460px;
+  height: 430px;
+  background-color: rgba(60, 165, 206, 0.185);
+  border-radius: 38% 62% 43% 57% / 59% 52% 48% 41%;
+}
+.shape-7 {
+  top: 40%;
+  right: 15%;
+  width: 360px;
+  height: 360px;
+  background-color: rgba(0, 255, 98, 0.151);
+  border-radius: 69% 31% 49% 51% / 48% 52% 48% 52%;
+}
+.shape-9 {
+  top: 30%;
+  right: 5%;
+  width: 500px;
+  height: 450px;
+  background-color: rgba(118, 230, 90, 0.329);
+  border-radius: 52% 48% 36% 64% / 57% 40% 60% 43%;
+}
+.shape-10 {
+  top: 10%;
+  left: 5%;
+  width: 400px;
+  height: 350px;
+  background-color: rgba(128, 194, 21, 0.281);
+  border-radius: 52% 48% 36% 64% / 57% 40% 60% 43%;
+}
+.shape-11 {
+  bottom: 2%;
+  left: 10%;
+  width: 400px;
+  height: 350px;
+  background-color: rgba(157, 194, 21, 0.356);
+  border-radius: 52% 48% 36% 64% / 57% 40% 60% 43%;
+}
 
 
 /* profile  */
@@ -234,7 +349,7 @@ p , label {
 }
 
 .profile-name {
-  margin: 80px;
+  margin:80px auto;
 }
 
 .profile-text p {
@@ -293,9 +408,11 @@ p , label {
 #work2 {
   background-image: url("./assets/work-img2.png");
 }
+#work3 {
+  background-image: url("./assets/work-img3.png");
+}
 
 .work-img:hover {
-  box-shadow: 0px 0px 12px 8px #777777;
   transform: scale(1.02,1.02);
   cursor: pointer;
 }
