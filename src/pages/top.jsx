@@ -4,15 +4,13 @@ import Header from "../components/header";
 
 class Top extends React.Component {
     render(){
-        const topLen = ['tab-now','no','no','no'];
 
         const topShape = document.getElementById('top-shape');
         // 時間帯によって図形の中身が変わる
-        
 
         return(
             <div>
-                <Header headerLen = {topLen} />
+                <Header len1='tab-now' len2='no' len3='no' len4='no' />
                 <div className="top-content">
 
                     <div className="top-content-title">

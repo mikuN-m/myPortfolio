@@ -3,7 +3,6 @@ import Header from "../components/header";
 
 class Skill extends React.Component {
     render(){
-        const skillLen = ['no','no','tab-now','no'];
 
         const skillBox = [
             ['HTML','見出しや段落、リスト、フォームなどの基本的な記述ができます。'],
@@ -47,7 +46,7 @@ class Skill extends React.Component {
                     <div className="bac-shape shape-8"></div>
                 </div>
 
-                <Header headerLen = {skillLen} />
+                <Header len1='no' len2='no' len3='tab-now' len4='no' />
 
                 <div className="header-titel-hidden">
                     <h1>skill</h1>

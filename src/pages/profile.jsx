@@ -3,7 +3,6 @@ import Header from "../components/header";
 
 class Profile extends React.Component {
     render(){
-    const topLen = ['no','tab-now','no','no'];
         return(
             <div>
                 
@@ -13,7 +12,7 @@ class Profile extends React.Component {
                     <div className="bac-shape shape-4"></div>
                 </div>
 
-                <Header headerLen = {topLen} />                
+                <Header len1='no' len2='tab-now' len3='no' len4='no' />           
 
                 <div className="header-titel-hidden">
                     <h1>profle</h1>

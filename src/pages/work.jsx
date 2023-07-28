@@ -116,7 +116,7 @@ class Work extends React.Component {
                     <div className="bac-shape shape-11"></div>
                 </div>
 
-                <Header headerLen = {workLen} />
+                <Header len1='no' len2='no' len3='no' len4='tab-now' />
 
                 <div className="header-titel-hidden">
                     <h1>work</h1>
